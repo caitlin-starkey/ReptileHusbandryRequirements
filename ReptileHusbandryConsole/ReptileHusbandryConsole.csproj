@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ReptileHusbandryData\ReptileHusbandryData.csproj" />
+    <ProjectReference Include="..\ReptileHusbandryDomain\ReptileHusbandryDomain.csproj" />
+  </ItemGroup>
+
 </Project>
