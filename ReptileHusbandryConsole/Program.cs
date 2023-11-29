@@ -2,7 +2,7 @@
 using ReptileHusbandryData;
 using ReptileHusbandryDomain;
 using System.Net.Http.Headers;
-using (HusbandryContext context =  new HusbandryContext())
+using (HusbandryContext context = new HusbandryContext())
 
 
 //GetReptiles();
@@ -11,6 +11,7 @@ GetReptiles();
 GetTanks();
 AddTanks();
 GetTanks();
+ReptileQuery();
 
 void AddReptiles()
 {
@@ -44,4 +45,16 @@ void GetTanks()
     {
         Console.WriteLine(tank.SizeGallons + ", " + tank.PriceUSD);
     }
+}
+void ReptileQuery()
+{
+    using var context = new HusbandryContext();
+    var reptiles = context.Reptiles.Where(s => s.Name == Console.ReadLine()).ToList();
+        {
+            foreach(var value in reptiles)
+            {
+            Console.WriteLine("An adult " + value.Name + " requires " + value.SizeGallons + " gallons of tank space.");
+            }
+        };
+    //method allows user to query needs for a specific pet, needs a prompt
 }
