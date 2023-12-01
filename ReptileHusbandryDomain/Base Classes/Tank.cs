@@ -9,7 +9,8 @@ namespace ReptileHusbandryDomain
     public class Tank
     {
         public int TankID { get; set; }
-        public int SizeGallons { get; set; }
+        public int GallonSize { get; set; }
         public decimal PriceUSD { get; set; }
+
     }
 }
