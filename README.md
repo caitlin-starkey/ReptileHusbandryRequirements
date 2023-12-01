@@ -1,1 +1,8 @@
 # ReptileHusbandryRequirements
+This project currently allows a user to look up tank size requirements and the pricing of said tanks for various reptiles commonly kept as pets. It uses EF Core 6 to create and manipulate tables in a database for that purpose. It currently contains methods to add reptiles and tanks to the database table from a list, methods to add a single object at a time not from a list, a LINQ query method to retrieve objects from a table, a method that retrieves objects from a table using an SQL query, a method that joins two tables using LINQ, and a method that joins two lists using LINQ. The project could be expanded upon by adding more requirements and pricing options, such as substrate needed to house each pet and humidity levels required, as well as providing the sources of where the various items can be obtained for the listed prices. 
+
+The three required features included are: (1) Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program, (2) Have 2 or more tables (entities) in your application that are related and have a function return data from both entities.  In entity framework, this is equivalent to a join, and (3) Query your database using a raw SQL query, not EF.
+
+When running this project, keep in mind that currently the program will add its lists to the database every time it is run, adding duplicate entries. This will, of course, cause the data retrieval methods to print increasing amounts of data to the console each time the program is run since there will be more entries matching what you asked it for. 
+
+If there are any questions during my working hours of 8:30am-5:00pm EST Monday-Friday, please reach out to me at bluemoon.lunacy@gmail.com
