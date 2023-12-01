@@ -31,6 +31,7 @@ namespace ReptileHusbandryConsole
             {
                 Console.WriteLine("A " + reptank.GallonSize + " tank costs $" + reptank.PriceUSD + ".");
             }
+            //method performs a join but doesn't do it via the tables so it isn't currently used
         }
     }
 }

@@ -17,11 +17,11 @@ HusbandryContext context = new HusbandryContext();
 
 //GetReptiles();
 //AddReptiles();
-AddReptilesList();
+AddReptilesList(); //(will add data to local db each time program is run, causing repeated instances in the tables)
 GetReptiles();
 //GetTanks();
 //AddTanks();
-AddTanksList();
+AddTanksList(); //(will add data to local db each time program is run, causing repeated instances in the tables)
 GetTanks();
 ReptileQuery();
 PriceQuery();
@@ -96,7 +96,7 @@ void PriceQuery()
         {
             var sizeNeeded = (from tankSize in context.Reptiles
                               from tank in context.Tanks
-                              where tankSize.SizeGallons == tank.GallonSize
+                              where (tankSize.SizeGallons == tank.GallonSize) && (tankSize.Name == value.Name)
                               select new
                               {
                                   GallonSize = tank.GallonSize,
@@ -108,6 +108,6 @@ void PriceQuery()
             }
         }
     }
-    //This should join the databases by finding the size requirement of the reptile from the user input name,
+    //Joins the databases by finding the size requirement of the reptile from the user input name,
     //matching that with a size in the tanks database, and finding the tank price(s) from the tank database
 }

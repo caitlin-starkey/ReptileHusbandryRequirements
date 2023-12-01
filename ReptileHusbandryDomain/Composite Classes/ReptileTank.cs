@@ -15,4 +15,5 @@ namespace ReptileHusbandryDomain
         public int? GallonSize { get; set; }
         public decimal? PriceUSD { get; set; }
     }
+    //class is used for the non-table join method. it currently does not have a use in the program that actually gets run
 }
