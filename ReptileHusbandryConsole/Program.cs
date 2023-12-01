@@ -15,16 +15,19 @@ using (HusbandryContext context2 = new HusbandryContext())
 HusbandryContext context = new HusbandryContext();
 //saves me from having to make a context in every method in Program.cs
 
-//GetReptiles();
-//AddReptiles();
-AddReptilesList(); //(will add data to local db each time program is run, causing repeated instances in the tables)
-GetReptiles();
-//GetTanks();
-//AddTanks();
-AddTanksList(); //(will add data to local db each time program is run, causing repeated instances in the tables)
-GetTanks();
-ReptileQuery();
-PriceQuery();
+//MAIN
+
+    //GetReptiles();
+    //AddReptiles();
+    AddReptilesList(); //(will add data to local db each time program is run, causing repeated instances in the tables)
+    GetReptiles();
+    //GetTanks();
+    //AddTanks();
+    AddTanksList(); //(will add data to local db each time program is run, causing repeated instances in the tables)
+    GetTanks();
+    ReptileQuery();
+    PriceQuery();
+
 
 void AddReptiles()
 {
